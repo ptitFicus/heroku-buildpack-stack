@@ -121,6 +121,8 @@ speak "WORK_DIR CONTENT"
 ls /app
 speak "ROOT CONTENT"
 ls /
+speak "ASSETS CONTENT"
+ls /app/assets
 mv "$WORK_DIR/assets" "$BUILD_DIR/bin/assets"
 
 speak "Caching .stack-work"
