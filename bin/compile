@@ -118,7 +118,9 @@ echo $WORK_DIR
 speak "whereami"
 pwd
 speak "WORK_DIR CONTENT"
-ls "$WORK_DIR"
+ls /app
+speak "ROOT CONTENT"
+ls /
 mv "$WORK_DIR/assets" "$BUILD_DIR/bin/assets"
 
 speak "Caching .stack-work"
