@@ -113,7 +113,7 @@ mkdir -p "$BUILD_DIR/vendor"
 mkdir -p "$BUILD_DIR/.local"
 mv "$WORK_DIR/vendor/ghc-libs" "$BUILD_DIR/vendor"
 mv "$WORK_DIR/.local/bin" "$BUILD_DIR/.local"
-mv "$WORK_DIR/assets/bin" "$BUILD_DIR/bin/assets"
+mv "$WORK_DIR/assets" "$BUILD_DIR/bin/assets"
 
 speak "Caching .stack-work"
 rsync -avq "$WORK_DIR/.stack-work/" "$SANDBOX_DIR"
