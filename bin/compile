@@ -119,7 +119,7 @@ speak "Caching .stack-work"
 rsync -avq "$WORK_DIR/.stack-work/" "$SANDBOX_DIR"
 cp -Rp "$WORK_DIR/.stack-work" "$BUILD_DIR"
 
-speak "assets dir"
-ls /app/.local/bin/assets
+speak "work dir"
+echo $BUILD_DIR
 
 speak "Finished!"
