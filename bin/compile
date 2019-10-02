@@ -113,13 +113,13 @@ mkdir -p "$BUILD_DIR/vendor"
 mkdir -p "$BUILD_DIR/.local"
 mv "$WORK_DIR/vendor/ghc-libs" "$BUILD_DIR/vendor"
 mv "$WORK_DIR/.local/bin" "$BUILD_DIR/.local"
-mv "$WORK_DIR/assets" "$BUILD_DIR/bin"
+mv "$WORK_DIR/assets" "$BUILD_DIR/.local/bin"
 
 speak "Caching .stack-work"
 rsync -avq "$WORK_DIR/.stack-work/" "$SANDBOX_DIR"
 cp -Rp "$WORK_DIR/.stack-work" "$BUILD_DIR"
 
 speak "assets dir"
-ls /app/bin/assets
+ls /app/.local/bin/assets
 
 speak "Finished!"
